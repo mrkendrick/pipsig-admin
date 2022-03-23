@@ -1,16 +1,13 @@
-import { blue, yellow } from '@mui/material/colors'
 import { createTheme } from '@mui/material/styles'
+import { blue } from '@mui/material/colors'
 
 // Create a theme instance.
 const theme = createTheme({
   typography: {
     fontFamily: ['Encode Sans'].join(','),
   },
-
   palette: {
-    primary: {
-      main: yellow[600],
-    },
+    primary: { main: blue[900] },
 
     text: {
       primary: '#0a0f38',
