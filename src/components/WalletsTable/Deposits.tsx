@@ -57,13 +57,13 @@ const Deposits = () => {
 
     const data: Wallet = {
       ...wallet,
-      totalBalance: wallet.totalBalance + amount,
+      totalBalance: wallet.totalBalance + Number(amount),
       fundingWallet: {
         ...wallet.fundingWallet,
-        balance: wallet.fundingWallet.balance + amount,
+        balance: wallet.fundingWallet.balance + Number(amount),
         percentageChange:
-          ((wallet.fundingWallet.balance - amount) /
-            (wallet.fundingWallet.balance + amount)) *
+          ((wallet.fundingWallet.balance - Number(amount)) /
+            (wallet.fundingWallet.balance + Number(amount))) *
           100,
       },
       depositHistory: [

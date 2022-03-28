@@ -30,6 +30,7 @@ import CheckIcon from '@mui/icons-material/Check'
 import CancelIcon from '@mui/icons-material/Cancel'
 import { bindActionCreators } from 'redux'
 import verificationActions from '../../redux/actions/verification'
+import { SecurityLevel } from '../../redux/reducers/auth.reducer'
 
 const VerificationRequestsTable = () => {
   const dispatch = useDispatch()
@@ -71,8 +72,18 @@ const VerificationRequestsTable = () => {
   }
 
   const onAccept = async (userId: string) => {
+    const verificationRequest = verificationRequests.data.find(
+      verification => verification.user._id === userId,
+    )
+
     const data = {
       kycVerified: true,
+      securityLevel:
+        verificationRequest.user.securityLevel === SecurityLevel.low
+          ? SecurityLevel.medium
+          : verificationRequest.user.securityLevel === SecurityLevel.medium
+          ? SecurityLevel.high
+          : SecurityLevel.high,
     }
 
     handleClose()

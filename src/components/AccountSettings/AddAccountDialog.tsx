@@ -18,7 +18,7 @@ import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import accountActions from '../../redux/actions/account'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup/dist/yup'
+import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import NextImage from 'next/image'
 
