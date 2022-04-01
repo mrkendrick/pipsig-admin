@@ -27,13 +27,11 @@ type Props = {
 
 type InputFields = {
   name: string
-  isVerified: boolean
 }
 
 const schema = yup
   .object({
     name: yup.string().required(),
-    isVerified: yup.boolean().required(),
   })
   .required()
 
@@ -42,6 +40,7 @@ const AddCollection = ({ onClose, isOpen }: Props) => {
   const [isValid, setIsValid] = useState({ state: false, alert: '' })
   const [isvalidating, setIsvalidating] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [isChecked, setIsChecked] = useState(true)
 
   const { _validate, _createCollection } = bindActionCreators(
     nftActions,
@@ -77,13 +76,13 @@ const AddCollection = ({ onClose, isOpen }: Props) => {
 
   const create: SubmitHandler<InputFields> = async data => {
     setLoading(true)
-    await _createCollection(data, () => onClose(), setLoading)
+    const collection = { ...data, isVerified: isChecked }
+    await _createCollection(collection, () => onClose(), setLoading)
   }
 
   useEffect(() => {
     if (isOpen) {
       setValue('name', '')
-      setValue('isVerified', false)
       setIsValid({
         state: false,
         alert: '',
@@ -119,20 +118,17 @@ const AddCollection = ({ onClose, isOpen }: Props) => {
             />
           </FormControl>
 
-          <FormControl>
-            <Controller
-              name='isVerified'
-              control={control}
-              rules={{ required: true }}
-              defaultValue={true}
-              render={({ field }) => (
-                <FormControlLabel
-                  control={<Checkbox defaultChecked {...field} />}
-                  label='Collection Verified'
-                />
-              )}
-            />
-          </FormControl>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={isChecked}
+                onChange={e => setIsChecked(e.target.checked)}
+                inputProps={{ 'aria-label': 'controlled' }}
+              />
+            }
+            label='Verify Collection'
+          />
+
           {isValid.alert !== '' && (
             <Alert severity={isValid.state ? 'success' : 'error'}>
               {isValid.alert}
