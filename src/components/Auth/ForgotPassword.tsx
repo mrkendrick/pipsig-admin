@@ -76,7 +76,7 @@ const ForgotPassword = () => {
   return (
     <>
       <Head>
-        <title>Pipsig | Forgot Password</title>
+        <title>Pip Signal | Forgot Password</title>
       </Head>
       <Container
         maxWidth='xs'

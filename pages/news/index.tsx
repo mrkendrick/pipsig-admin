@@ -49,7 +49,7 @@ const News = () => {
   return (
     <Box flex='3' position='relative'>
       <Head>
-        <title>Pipsig | News</title>
+        <title>Pip Signal | News</title>
       </Head>
       <BufferAuth />
 

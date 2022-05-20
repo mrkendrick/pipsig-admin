@@ -50,7 +50,7 @@ const Verification = () => {
   return (
     <Box flex='3' position='relative'>
       <Head>
-        <title>Pipsig | Verification</title>
+        <title>Pip Signal | Verification</title>
       </Head>
       <BufferAuth />
 

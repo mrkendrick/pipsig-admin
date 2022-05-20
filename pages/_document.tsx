@@ -19,9 +19,9 @@ class MyDocument extends Document {
           <meta charSet='UTF-8' />
           <meta
             name='description'
-            content='Pipsig is a smart and secure cryptocurrency exchange platform that enables users to trade Bitcoin, Ethereum, Binance Coin, and other cryptocurrencies, as well as a wide range of NFTs and other assets.'
+            content='Pip Signal is a smart and secure cryptocurrency exchange platform that enables users to trade Bitcoin, Ethereum, Binance Coin, and other cryptocurrencies, as well as a wide range of NFTs and other assets.'
           />
-          <meta name='keywords' content='Pipsig Trading' />
+          <meta name='keywords' content='Pip Signal Trading' />
           <link rel='icon' href='/logo.svg' />
           <link rel='shortcut icon' href='/logo.svg' />
           <link

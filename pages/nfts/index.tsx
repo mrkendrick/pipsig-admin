@@ -50,7 +50,7 @@ const Nfts = () => {
   return (
     <Box flex='3' position='relative'>
       <Head>
-        <title>Pipsig | Nfts</title>
+        <title>Pip Signal | Nfts</title>
       </Head>
       <BufferAuth />
 

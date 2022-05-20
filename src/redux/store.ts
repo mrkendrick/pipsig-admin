@@ -10,7 +10,7 @@ const initalState = {}
 const middleware = [thunk]
 
 const persistConfig = {
-  key: 'pipsig_fx_admin',
+  key: 'pipsig_admin',
   storage,
   blacklist: ['auth', 'alert', 'wallets'],
 }

@@ -44,7 +44,7 @@ const Wallets = () => {
   return (
     <Box flex='3'>
       <Head>
-        <title>Pipsig | Wallets</title>
+        <title>Pip Signal | Wallets</title>
       </Head>
       <BufferAuth />
       <Stack

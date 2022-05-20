@@ -46,7 +46,7 @@ const CollectionDialog = ({ isOpen, onClose }: Props) => {
   const { collection } = useSelector((state: RootState) => state.nfts)
   const [isAddAssetOpen, setIsAddAssetOpen] = useState(false)
   const [isCopied, setCopied] = useClipboard(
-    `https://pipsig.com/collection/${collection.slug}`,
+    `https://pipsignal.org/collection/${collection.slug}`,
     {
       successDuration: 2000,
     },

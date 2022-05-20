@@ -9,7 +9,7 @@ const Logo = () => {
       <Link underline='none'>
         <Stack direction='row' alignItems='center' spacing={1.2}>
           <Typography fontWeight='bold' fontSize='large' color='#fff'>
-            Pipsig
+            Pip Signal
           </Typography>
         </Stack>
       </Link>

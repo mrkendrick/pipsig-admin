@@ -51,7 +51,7 @@ const Settings = ({ market }: Props) => {
   return (
     <Stack flex='3' position='relative'>
       <Head>
-        <title>Pipsig | Settings</title>
+        <title>Pip Signal | Settings</title>
       </Head>
       <BufferAuth />
 

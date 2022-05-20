@@ -74,5 +74,5 @@ class Helper {
   }
 }
 
-const HelperServices = new Helper('pipsig_admin_token', 'pipsigxRefCode')
+const HelperServices = new Helper('pipsignal_admin_token', 'pipsignalRefCode')
 export default HelperServices

@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <Box>
       <Head>
-        <title>Pipsig | Orders</title>
+        <title>Pip Signal | Orders</title>
       </Head>
     </Box>
   )

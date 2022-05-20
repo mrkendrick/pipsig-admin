@@ -45,7 +45,7 @@ const Users = () => {
   return (
     <Box flex='3' position='relative'>
       <Head>
-        <title>Pipsig | Users</title>
+        <title>Pip Signal | Users</title>
       </Head>
       <BufferAuth />
 

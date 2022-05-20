@@ -79,7 +79,7 @@ const Signup = () => {
   return (
     <>
       <Head>
-        <title>Pipsig | Get Started</title>
+        <title>Pip Signal | Get Started</title>
       </Head>
       <Container
         maxWidth='xs'
@@ -98,7 +98,7 @@ const Signup = () => {
             fontWeight='bold'
             mb='0.8rem'
           >
-            Get Started with Pipsig
+            Get Started with Pip Signal
           </Typography>
           <Typography
             align='center'

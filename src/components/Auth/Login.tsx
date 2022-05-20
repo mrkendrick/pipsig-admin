@@ -78,7 +78,7 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>Pipsig | Login</title>
+        <title>Pip Signal | Login</title>
       </Head>
       <Container
         maxWidth='xs'
@@ -97,7 +97,7 @@ const Login = () => {
             fontWeight='bold'
             mb='0.8rem'
           >
-            Login to Pipsig
+            Login to Pip Signal
           </Typography>
           <Typography
             align='center'
