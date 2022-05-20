@@ -27,14 +27,12 @@ type Props = {
 type InputFields = {
   funding: number;
   spot: number;
-  bonus: number;
 };
 
 const schema = yup
   .object({
     funding: yup.number().min(0).required(),
     spot: yup.number().min(0).required(),
-    bonus: yup.number().min(0).required(),
   })
   .required();
 
@@ -73,8 +71,6 @@ const EditWallet = ({ isOpen, onClose, wallet }: Props) => {
             (wallet.spotWallet.balance - data.spot)) *
           100,
       },
-
-      //   bonus: data.bonus,
 
       totalBalance: data.funding + data.spot,
     };
@@ -149,27 +145,6 @@ const EditWallet = ({ isOpen, onClose, wallet }: Props) => {
               )}
             />
           </FormControl>
-
-          {/* <FormControl fullWidth>
-            <Controller
-              name="bonus"
-              control={control}
-              rules={{ required: true }}
-              defaultValue={wallet.bonus}
-              render={({ field }) => (
-                <TextField
-                  fullWidth
-                  size="small"
-                  type="number"
-                  label="Bonus"
-                  variant="outlined"
-                  placeholder="Balance"
-                  error={errors.bonus ? true : false}
-                  {...field}
-                />
-              )}
-            />
-          </FormControl> */}
         </Stack>
       </DialogContent>
       <DialogActions>
