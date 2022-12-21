@@ -5,11 +5,11 @@ module.exports = {
 
 module.exports = {
   images: {
-    domains: [
-      'assets.coingecko.com',
-      'picsum.photos',
-      'res.cloudinary.com',
-      'lh3.googleusercontent.com',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
     ],
   },
 }
