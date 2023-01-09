@@ -1,20 +1,24 @@
+import CheckIcon from '@mui/icons-material/Check'
+import ContentCopyIcon from '@mui/icons-material/ContentCopy'
+import DeleteIcon from '@mui/icons-material/Delete'
+import MoreVertIcon from '@mui/icons-material/MoreVert'
 import {
   Box,
-  Typography,
+  Fade,
+  IconButton,
+  ListItemIcon,
+  ListItemText,
+  Menu,
+  MenuItem,
+  Paper,
   Table,
+  TableBody,
+  TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  TableCell,
-  TableBody,
-  Paper,
-  IconButton,
-  Menu,
-  MenuItem,
-  Fade,
-  ListItemIcon,
-  ListItemText,
   Tooltip,
+  Typography,
 } from '@mui/material'
 import { reverse, sortBy, truncate } from 'lodash'
 import React, { MouseEvent, useMemo, useState } from 'react'
@@ -22,13 +26,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import walletActions from '../../redux/actions/wallet'
 import { RootState } from '../../redux/reducers'
+import { Wallet } from '../../redux/reducers/wallet.reducer'
 import HelperServices from '../../utils/helpers'
 import NoData from '../NoData'
-import CheckIcon from '@mui/icons-material/Check'
-import MoreVertIcon from '@mui/icons-material/MoreVert'
-import DeleteIcon from '@mui/icons-material/Delete'
-import { Wallet } from '../../redux/reducers/wallet.reducer'
-import ContentCopyIcon from '@mui/icons-material/ContentCopy'
 
 type Props = {
   closeDialog: () => void
@@ -99,7 +99,7 @@ const Withdraws = ({ closeDialog }: Props) => {
       <Typography variant='h5'>Withdraws</Typography>
       {wallet.withdrawHistory.length === 0 && <NoData text='No Withdraws' />}
 
-      {wallet.depositHistory.length > 0 && (
+      {wallet.withdrawHistory.length > 0 && (
         <Box mt={2}>
           <TableContainer component={Paper}>
             <Table
