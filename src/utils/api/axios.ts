@@ -1,7 +1,7 @@
 import axios from 'axios'
 import HelperServices from '../helpers'
 
-export const baseURL = 'https://api.pipsignal.org/api/v1'
+export const baseURL = 'https://api.pipsigfx.com/api/v1'
 
 const defaultConfig = {
   baseURL,

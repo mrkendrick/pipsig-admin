@@ -36,7 +36,7 @@ const AssetItem = ({
   const [loading, setLoading] = useState(false)
   const [editAsset, setEditAsset] = useState(false)
   const [isCopied, setCopied] = useClipboard(
-    `https://pipsignal.org/collection/${collection}/asset/${_id}`,
+    `https://pipsigfx.com/collection/${collection}/asset/${_id}`,
     {
       successDuration: 2000,
     },
